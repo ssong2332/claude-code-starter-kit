@@ -25,6 +25,24 @@ A production-ready Starter Kit for Claude Code projects: 6 specialized subagents
 
 > After cloning, replace this README with your own project's README (`## Overview` / `## Getting Started` / the Documentation table below are a good starting shape). Fill in the `{{placeholders}}` in `CLAUDE.md`. Do **not** carry over this kit's root `CHANGELOG.md` — your project starts from the blank `docs/CHANGELOG.md` instead. Full agent invocation guide: `docs/PromptRules.md`.
 
+## Configuration
+
+This project uses a `.env` file for local secrets and configuration, which is git-ignored and never committed.
+
+1. Copy the example file:
+   ```
+   cp .env.example .env
+   ```
+2. Fill in the values in `.env`:
+
+   | Variable | Purpose |
+   |---|---|
+   | `YOUR_API_KEY` | API key for external service integration |
+   | `YOUR_SECRET` | Application secret (session signing, encryption, etc.) |
+   | `DATABASE_URL` | Database connection string |
+
+3. When the architecture is defined and new environment variables are introduced, add them to `.env.example` (placeholder value only) and to this table.
+
 ## Documentation
 | Document | Purpose |
 |---|---|
