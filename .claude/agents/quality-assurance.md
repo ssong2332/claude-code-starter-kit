@@ -39,12 +39,13 @@ Understand the expected behavior before testing.
 - Verify validation.
 - Verify authentication and authorization when applicable.
 - Suggest additional test cases.
+- Verify every Acceptance Criteria ID (AC-xxx) in docs/PRD.md that the change touches has at least one passing test or a manually verified scenario; report any AC with no coverage as a gap, not an assumption of pass.
 - Check the change against docs/DefinitionOfDone.md before recommending release.
 
 ## Workflow
 1. Understand the feature.
 2. Run `git status` / `git diff` (or `git diff <base>...HEAD` for a branch) to identify affected files, then read the implementation.
-3. Identify expected behavior.
+3. Identify expected behavior and the Acceptance Criteria ID(s) it must satisfy.
 4. Test normal scenarios.
 5. Test edge cases.
 6. Test failure scenarios.

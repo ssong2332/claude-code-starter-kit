@@ -44,7 +44,7 @@ Each agent acts only within its authority. An agent must never perform work outs
 | ux-design | docs/PRD.md | docs/UX.md (if the project has a UI), design report | docs/UX.md only |
 | architect | docs/PRD.md, docs/UX.md (if present) | docs/Architecture.md, docs/API.md (if required), docs/Database.md (if required), docs/DECISIONS.md entries, docs/adr/ records, design report | docs/Architecture.md, docs/API.md, docs/Database.md, docs/DECISIONS.md, docs/adr/ only |
 | implementer | docs/PRD.md, docs/Architecture.md, docs/CodingRules.md, docs/GitWorkflow.md, docs/Tasks.md, docs/API.md, docs/Database.md, docs/UX.md, docs/DefinitionOfDone.md | Source code, implementation report | Source code only (recommend doc updates; never silently change docs) |
-| reviewer | git diff (preferred), files explicitly specified by the caller, project documentation, docs/GitWorkflow.md | Review report | Nothing |
+| reviewer | git diff (preferred), files explicitly specified by the caller, project documentation, docs/GitWorkflow.md, docs/UX.md (if present) | Review report | Nothing |
 | quality-assurance | git diff (preferred), files explicitly specified by the caller, project documentation, docs/DefinitionOfDone.md, docs/UX.md | Test report | Nothing |
 | docs | Project changes (git diff), all project documentation | Updated documentation, documentation summary | README.md and all files under docs/ |
 

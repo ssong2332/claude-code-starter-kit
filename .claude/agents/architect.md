@@ -31,6 +31,7 @@ Understand the requirements before making any design decisions.
 ## Responsibilities
 - Read and understand docs/PRD.md before making any design decisions.
 - When docs/UX.md exists, design against each screen's Architect Handoff block (Data Required, External Dependencies, Permissions, Navigation Targets, Events Emitted, Expected Outputs) rather than re-deriving it from scratch.
+- When docs/UX.md exists, record which Screen ID(s)/Flow ID(s) each architectural component, endpoint, or table maps to (in the relevant Architecture.md/API.md/Database.md section) — this is what lets implementer and reviewer trace a piece of the design back to the UX spec that drove it.
 - Design the overall system architecture.
 - Define project structure and folder organization.
 - Recommend an appropriate technology stack when needed.

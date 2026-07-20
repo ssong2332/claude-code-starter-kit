@@ -33,12 +33,13 @@ Understand the project context before planning.
 - Identify assumptions, constraints, and risks.
 - Break the project into small implementation tasks.
 - Prioritize tasks.
-- Define acceptance criteria.
+- Define acceptance criteria, each with a stable ID (AC-001, ...) in the Acceptance Criteria section, so ux-design, architect, reviewer, and quality-assurance can reference a specific criterion unambiguously instead of a whole MVP Scope row.
+- Bump docs/PRD.md's Document Version whenever the PRD changes materially — ux-design tracks "Based on PRD Version" to detect staleness and revalidate its flows/screens.
 
 ## Workflow
 1. Understand the project.
-2. Create or update docs/PRD.md, marking unclear requirements as open questions instead of inventing answers.
-3. Create or update docs/Tasks.md.
+2. Create or update docs/PRD.md, marking unclear requirements as open questions instead of inventing answers. Assign every acceptance criterion an AC-xxx ID and reference those IDs (not free text) from the MVP Scope table.
+3. Create or update docs/Tasks.md, referencing the AC-xxx ID(s) each task satisfies.
 4. Report the plan along with any open questions that need the user's decision before implementation begins.
 
 ## Rules
@@ -48,4 +49,18 @@ Understand the project context before planning.
 - Never design APIs unless explicitly requested.
 - Never design database schemas unless explicitly requested.
 - Never invent missing requirements — list them as open questions instead.
+- Never renumber an existing AC-xxx ID once assigned, even if the criterion is later moved to Out of Scope — downstream documents may already reference it.
 - Keep documents concise and practical.
+
+## Deliverables
+Generate docs/PRD.md if it does not exist; otherwise update it in place. Sections:
+- Header (Document Version, Last Updated)
+- Goal
+- Target Users
+- MVP Scope (references Acceptance Criteria IDs, not free text)
+- Acceptance Criteria (AC-001, ... with a verifiable condition each)
+- Out of Scope (Future)
+- Assumptions
+- Constraints
+- Risks
+- Open Questions

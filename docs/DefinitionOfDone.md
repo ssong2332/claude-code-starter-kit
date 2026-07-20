@@ -4,7 +4,7 @@ Owner: User. Enforced by implementer (self-check) and quality-assurance (gate).
 A task's Status may become `done` in docs/Tasks.md only when every item below passes.
 
 ## Checklist
-- [ ] Acceptance criteria in docs/Tasks.md are met, with evidence (output, screenshot, or log).
+- [ ] Acceptance Criteria (AC-xxx in docs/PRD.md, referenced by docs/Tasks.md) are met, with evidence (output, screenshot, or log).
 - [ ] Code follows docs/CodingRules.md.
 - [ ] Code is consistent with docs/Architecture.md (no layer violations).
 - [ ] Lint passes — command output attached.

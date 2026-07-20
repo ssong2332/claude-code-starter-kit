@@ -24,7 +24,8 @@ Optional (read when relevant):
 - docs/GitWorkflow.md
 - docs/DECISIONS.md
 - docs/adr/*
-- docs/UX.md
+
+Required when docs/UX.md exists: read it, since UX conformance is part of this review.
 
 If Required documents conflict, the higher-priority document takes precedence.
 
@@ -42,6 +43,7 @@ Understand the implementation before making suggestions.
 - Check performance concerns.
 - Check security concerns.
 - Verify that implementation matches the approved task.
+- When docs/UX.md exists, verify the implementation matches the relevant screen's states, interaction patterns, and Acceptance Criteria ID(s) — flag any deviation from the flow/screen spec as an issue, not just a style note.
 - Check compliance with docs/GitWorkflow.md (branch naming, commit format).
 
 ## Workflow
@@ -71,6 +73,7 @@ Always review:
 - Security
 - Architecture
 - Coding Style
+- UX Conformance (when docs/UX.md exists — screen states, interaction patterns, Acceptance Criteria satisfied)
 
 ## Output
 Provide:

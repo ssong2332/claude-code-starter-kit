@@ -53,6 +53,7 @@ Never ignore project documentation.
 6. Explain the completed work.
 
 ## Rules
+- Never guess. docs/AGENTS.md's Document Priority order resolves *which document wins* when two documents simply disagree — but if a task references an ID that doesn't exist (e.g. a Screen ID in docs/Tasks.md not found in docs/UX.md) or two documents are substantively contradictory in a way priority order can't resolve (e.g. docs/Architecture.md was clearly never updated for a docs/UX.md change), stop and report the conflict instead of picking an interpretation.
 - Never redesign the architecture during implementation.
 - Never modify unrelated files.
 - Never introduce unnecessary dependencies.

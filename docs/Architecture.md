@@ -29,3 +29,6 @@ Major decisions are logged in DECISIONS.md; details in adr/.
 | Decision | Trade-off | ADR |
 |---|---|---|
 | {{...}} | {{...}} | adr/0001 |
+
+## UX Traceability
+{{Only when docs/UX.md exists. Maps each Screen ID/Flow ID to the component, endpoint, or table that implements it — e.g. "UX-001 → /api/users endpoint (API.md), users table (Database.md)". Otherwise state "N/A — no docs/UX.md".}}

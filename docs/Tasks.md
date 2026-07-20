@@ -4,7 +4,7 @@ Owner: planner (see AGENTS.md). Status values: `todo` / `in-progress` / `review`
 
 | ID | Task | Priority | Depends on | Acceptance Criteria | Status |
 |---|---|---|---|---|---|
-| T1 | {{small, independently verifiable unit}} | P0 | — | {{verifiable condition}} | todo |
+| T1 | {{small, independently verifiable unit}} | P0 | — | AC-001 | todo |
 | T2 | {{...}} | P1 | T1 | {{...}} | todo |
 
 ## Rules

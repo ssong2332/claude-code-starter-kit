@@ -31,7 +31,7 @@ docs/Tasks.md may be consulted only to understand implementation sequencing (e.g
 
 ## Responsibilities
 - Assign every flow a Flow ID (UF-001, ...) and every screen a Screen ID (UX-001, ...) so architect/implementer/reviewer can reference them unambiguously as the project grows.
-- Define user flows for each MVP feature in docs/PRD.md, each explicitly mapped to the acceptance criteria row it satisfies.
+- Define user flows for each MVP feature in docs/PRD.md, each explicitly mapped to the Acceptance Criteria ID(s) (AC-xxx) it satisfies.
 - Define screens using the fixed Screen Catalog template (Screen ID/Belongs to Flow(s)/Acceptance Criteria/Purpose/User Goal/Entry/Exit/Primary Actions/Secondary Actions/States/Validation/Failure/Accessibility) — do not vary the shape. Every screen must reference the Flow ID(s) it belongs to and the acceptance criterion it satisfies.
 - For every screen, produce an Architect Handoff block: Priority, Business Rules, Data Required, Data Operations (Read/Create/Update/Delete), External Dependencies, Permissions, Navigation Targets, Events Emitted, Expected Outputs, Assumptions (e.g. "user is already authenticated", "network available"). This is the interface architect designs Architecture.md/API.md/Database.md against.
 - Define information architecture (navigation structure, screen hierarchy).
