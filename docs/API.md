@@ -2,6 +2,7 @@
 
 Owner: architect (see AGENTS.md). Others read-only.
 Created only when the project exposes an API (architect: "if required").
+Based on PRD Version: {{x.x}} · Based on UX Version: {{y.y or N/A}}
 
 ## Conventions
 - Base URL: {{/api/v1}}

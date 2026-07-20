@@ -2,6 +2,7 @@
 
 Owner: architect (see AGENTS.md). Others read-only.
 Created only when the project requires a database (architect: "if required").
+Based on PRD Version: {{x.x}}
 
 ## Engine
 {{PostgreSQL 16 / SQLite / ...}} — reason in DECISIONS.md.

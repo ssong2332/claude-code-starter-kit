@@ -2,6 +2,7 @@
 
 Owner: architect (see AGENTS.md). Others read-only.
 Major decisions are logged in DECISIONS.md; details in adr/.
+Based on PRD Version: {{x.x}} · Based on UX Version: {{y.y or N/A}} · Last Updated: {{date}}
 
 ## Tech Stack
 | Layer | Choice | Reason |

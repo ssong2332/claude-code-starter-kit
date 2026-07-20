@@ -11,8 +11,8 @@ A task's Status may become `done` in docs/Tasks.md only when every item below pa
 - [ ] Build succeeds — command output attached.
 - [ ] Tests exist for the change and pass — actual test run output attached, not claimed.
 - [ ] No unrelated files modified (`git diff` contains only task-scoped changes).
-- [ ] reviewer Critical Issues: zero open.
-- [ ] quality-assurance verdict: release recommended (or user explicitly accepted the risks).
+- [ ] reviewer Status: `APPROVED` (or user explicitly accepted the risks of a REJECTED item).
+- [ ] quality-assurance Release Recommendation: `GO` (or user explicitly accepted the risks of a NO-GO item).
 - [ ] Documentation impact reported (docs agent invoked if docs changed).
 - [ ] docs/CHANGELOG.md updated for user-visible changes.
 

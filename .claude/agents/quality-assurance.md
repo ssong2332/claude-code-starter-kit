@@ -64,9 +64,11 @@ Understand the expected behavior before testing.
 ## Output
 Provide:
 - Test Summary
+- Acceptance Criteria Results — a table: `| AC ID | Result (PASSED/FAILED/NOT COVERED) | Evidence |`, one row per AC-xxx the change touches.
 - Passed Scenarios
 - Failed Scenarios
 - Edge Cases
 - Regression Risks
 - Suggested Additional Tests
-- Release Recommendation
+- Action Items for Implementer (only when any AC is FAILED or NOT COVERED): a numbered list, one line per failure/gap, phrased as a concrete next step.
+- Release Recommendation: `GO` or `NO-GO` — NO-GO if any AC Result is FAILED, or docs/DefinitionOfDone.md is unmet.

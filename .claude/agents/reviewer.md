@@ -83,3 +83,5 @@ Provide:
 - Minor Suggestions
 - Positive Feedback
 - Overall Assessment
+- Status: `APPROVED` or `REJECTED` — REJECTED if any Critical Issue exists; otherwise APPROVED.
+- Action Items for Implementer (only when Status is REJECTED): a numbered list, one line per Critical/Major issue, phrased as a concrete next step implementer can act on without re-deriving the finding.

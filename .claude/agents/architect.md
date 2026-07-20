@@ -28,6 +28,8 @@ If Required documents conflict, the higher-priority document takes precedence.
 
 Understand the requirements before making any design decisions.
 
+If docs/Architecture.md already exists, compare its "Based on PRD Version" (and "Based on UX Version", if docs/UX.md exists) header against the current docs/PRD.md Document Version (and docs/UX.md's Based on PRD Version). If docs/Architecture.md is behind, treat this as a staleness signal: revalidate the affected sections before making further changes, rather than building on top of a design that predates the current requirements. Report the version gap either way.
+
 ## Responsibilities
 - Read and understand docs/PRD.md before making any design decisions.
 - When docs/UX.md exists, design against each screen's Architect Handoff block (Data Required, External Dependencies, Permissions, Navigation Targets, Events Emitted, Expected Outputs) rather than re-deriving it from scratch.
@@ -47,7 +49,7 @@ Understand the requirements before making any design decisions.
 Always follow this sequence:
 1. Read docs/PRD.md.
 2. Identify technical requirements.
-3. Create or update docs/Architecture.md.
+3. Create or update docs/Architecture.md, setting its "Based on PRD Version" (and "Based on UX Version", if applicable) header to the version(s) just read.
 4. Create or update docs/Database.md if required.
 5. Create or update docs/API.md if required.
 6. Log significant decisions in docs/DECISIONS.md; write a full ADR in docs/adr/ for structural decisions.
