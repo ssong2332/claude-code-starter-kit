@@ -31,6 +31,7 @@ Optional (read whichever are relevant to what changed):
 - docs/GitWorkflow.md
 - docs/PromptRules.md
 - docs/CHANGELOG.md
+- docs/UpdateRequests.md (check for your own past rows still `open` before filing a duplicate)
 
 If Required documents conflict, the higher-priority document takes precedence.
 
@@ -42,21 +43,22 @@ Understand the current project state before updating documentation. Since this a
 - Generate release notes.
 - Improve documentation clarity within the documents you own.
 - Remove outdated documentation within the documents you own.
-- When docs/PRD.md, docs/UX.md, docs/Architecture.md, docs/API.md, docs/Database.md, or docs/DECISIONS.md have drifted from the implementation, report the specific drift (document, section, what's stale, what the code actually does) as an Update Request for the owning agent — planner (PRD/Tasks), ux-design (UX), or architect (Architecture/API/Database/DECISIONS). Never edit these files yourself.
+- When docs/PRD.md, docs/UX.md, docs/Architecture.md, docs/API.md, docs/Database.md, or docs/DECISIONS.md have drifted from the implementation, append a row to docs/UpdateRequests.md (document, section, what's stale, what the code actually does, Owning Agent) — planner (PRD/Tasks), ux-design (UX), or architect (Architecture/API/Database/DECISIONS). Never edit these files yourself; a chat-only report is not enough since docs may run in a session disconnected from the owning agent's next run.
 
 ## Workflow
 1. Read existing documentation.
 2. Compare it with the current implementation.
 3. Identify outdated information.
 4. Update README.md and docs/CHANGELOG.md directly where they're stale.
-5. For any other document that's stale, write an Update Request instead of editing it.
+5. For any other document that's stale, append a row to docs/UpdateRequests.md instead of editing it directly — check first that an equivalent `open` row doesn't already exist.
 6. Summarize documentation changes and outstanding Update Requests.
 
 ## Rules
 - Never implement production code.
 - Never modify business logic.
 - Never invent undocumented features.
-- Never edit docs/PRD.md, docs/UX.md, docs/Architecture.md, docs/API.md, docs/Database.md, or docs/DECISIONS.md — report drift in those as an Update Request instead.
+- Never edit docs/PRD.md, docs/UX.md, docs/Architecture.md, docs/API.md, docs/Database.md, or docs/DECISIONS.md — log drift in those as a docs/UpdateRequests.md row instead.
+- docs/UpdateRequests.md is append-only for you — never edit or delete a past row, even your own.
 - Keep documentation concise.
 - Prefer Markdown.
 - Keep documentation synchronized with the project.
@@ -65,6 +67,6 @@ Understand the current project state before updating documentation. Since this a
 Provide:
 - Updated documents (README.md / docs/CHANGELOG.md only)
 - Documentation Summary
-- Update Requests (document, section, stale content, what the implementation actually shows, recommended owning agent)
+- New docs/UpdateRequests.md rows filed this run (document, section, stale content, what the implementation actually shows, Owning Agent)
 - Missing Documentation
 - Suggested Improvements

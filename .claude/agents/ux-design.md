@@ -20,6 +20,7 @@ Required (always read if available):
 Optional (read when relevant):
 - docs/Tasks.md
 - docs/UX.md
+- docs/UpdateRequests.md (check for `open` rows naming ux-design as Owning Agent; resolve them and flip Status to `resolved`)
 
 If Required documents conflict, the higher-priority document takes precedence.
 

@@ -21,7 +21,7 @@ planner → [user approval] → ux-design (if the project has a user-facing UI) 
 - reviewer emits Status: APPROVED/REJECTED; quality-assurance emits Release Recommendation: GO/NO-GO. On REJECTED or NO-GO, their Action Items for Implementer go back to implementer, who re-implements and resubmits — implementer does not need to re-read the full report, just the Action Items.
 - Design-level defects go back to architect first, then implementer. UX-level defects go back to ux-design first.
 - implementer must satisfy docs/DefinitionOfDone.md before handing off to reviewer/quality-assurance.
-- docs never edits documents it doesn't own. When docs finds one stale (PRD/UX/Architecture/API/Database/DECISIONS), it emits an Update Request naming the owning agent; the user (or the pipeline) routes that request to planner/ux-design/architect as appropriate.
+- docs never edits documents it doesn't own. When docs finds one stale (PRD/UX/Architecture/API/Database/DECISIONS), it appends a row to docs/UpdateRequests.md naming the owning agent, so the request survives even if no one acts on it in the same session; the user (or the pipeline) routes that request to planner/ux-design/architect as appropriate, and the owning agent marks the row resolved once handled.
 
 ## Authority
 
@@ -47,7 +47,8 @@ Each agent acts only within its authority. An agent must never perform work outs
 | implementer | docs/PRD.md, docs/Architecture.md, docs/CodingRules.md, docs/GitWorkflow.md, docs/Tasks.md, docs/API.md, docs/Database.md, docs/UX.md, docs/DefinitionOfDone.md | Source code, implementation report | Source code; the Status column of its own task row in docs/Tasks.md only (recommend other doc updates; never silently change them) |
 | reviewer | git diff (preferred), files explicitly specified by the caller, project documentation, docs/GitWorkflow.md, docs/UX.md (if present) | Review report (Status: APPROVED / REJECTED) | Nothing |
 | quality-assurance | git diff (preferred), files explicitly specified by the caller, project documentation, docs/DefinitionOfDone.md, docs/UX.md | Test report (Release Recommendation: GO / NO-GO) | Nothing |
-| docs | Project changes (git diff), README.md, docs/CHANGELOG.md, other project documentation (read-only, to detect drift) | Updated README.md/CHANGELOG.md, documentation summary, Update Requests for documents it doesn't own | README.md, docs/CHANGELOG.md only |
+| docs | Project changes (git diff), README.md, docs/CHANGELOG.md, other project documentation (read-only, to detect drift) | Updated README.md/CHANGELOG.md, rows appended to docs/UpdateRequests.md for documents it doesn't own, documentation summary | README.md, docs/CHANGELOG.md, docs/UpdateRequests.md (append-only) |
+| planner / ux-design / architect | (in addition to their existing inputs) docs/UpdateRequests.md rows naming them as Owning Agent | (in addition to existing outputs) resolved Status on the rows they acted on | (in addition to existing scope) docs/UpdateRequests.md Status column, rows they own only |
 
 ## Document Ownership
 
@@ -69,6 +70,7 @@ Each agent acts only within its authority. An agent must never perform work outs
 | docs/DefinitionOfDone.md | User | Read-only (implementer/QA enforce) |
 | docs/PromptRules.md | User | Read-only |
 | docs/CHANGELOG.md | docs | Read-only |
+| docs/UpdateRequests.md | docs | Read-only, except the named Owning Agent (planner/ux-design/architect) may flip a row's Status from `open` to `resolved` |
 | Source code | implementer | Read-only |
 
 ## Document Priority
@@ -112,6 +114,7 @@ project/
     ├── DefinitionOfDone.md
     ├── GitWorkflow.md
     ├── PromptRules.md
+    ├── UpdateRequests.md
     └── adr/
         └── 0001-....md
 ```
