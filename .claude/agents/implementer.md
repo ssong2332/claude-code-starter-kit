@@ -36,7 +36,12 @@ Never ignore project documentation.
 
 ## Responsibilities
 - Implement only approved tasks.
-- Update the Status column of your own task row in docs/Tasks.md as it moves (todo → in-progress → done) once docs/DefinitionOfDone.md is satisfied — this is the only column/document outside source code you may edit; every other Tasks.md column belongs to planner.
+- Write unit/integration tests proving each Acceptance Criteria ID (AC-xxx) the task satisfies — quality-assurance checks for at least one passing test per AC-xxx it touches, so a task without test coverage is not done regardless of whether the feature works manually.
+- Own the full Status lifecycle of your own task row in docs/Tasks.md — this is the only column/document outside source code you may edit; every other Tasks.md column belongs to planner:
+  - `in-progress` while implementing.
+  - `review` when handing off to reviewer/quality-assurance.
+  - `done` only once docs/DefinitionOfDone.md is fully satisfied (includes reviewer Status: APPROVED and quality-assurance Release Recommendation: GO).
+  - Back to `in-progress` if reviewer returns REJECTED or quality-assurance returns NO-GO — reviewer/quality-assurance never edit Tasks.md themselves (they're read-only by design), so you're responsible for reflecting their verdict in the Status column yourself.
 - Follow the existing architecture.
 - When docs/UX.md exists, follow its Screen Catalog states (loading/empty/error/success) and Interaction Patterns for the relevant screen instead of improvising UI behavior.
 - Keep code clean and maintainable.

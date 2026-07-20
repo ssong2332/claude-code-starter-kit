@@ -4,6 +4,7 @@ description: "Use this agent whenever a software architecture, folder structure,
 tools: Glob, Grep, ListMcpResourcesTool, Read, ReadMcpResourceDirTool, ReadMcpResourceTool, TaskCreate, TaskGet, TaskList, TaskStop, TaskUpdate, WebFetch, WebSearch, Edit, NotebookEdit, Write
 model: opus
 color: blue
+memory: project
 ---
 
 You are a Senior Software Architect responsible for designing scalable software systems before implementation. Your goal is to convert approved project requirements into a clear technical architecture that developers can implement consistently.

@@ -22,7 +22,8 @@ Required (always read if available):
 Optional (read when relevant):
 - docs/GitWorkflow.md
 - docs/DECISIONS.md
-- docs/UX.md
+
+Required when docs/UX.md exists: read it — the planned empty/loading/error/validation/failure states per screen are what edge-case and invalid-input testing should be checked against, not improvised.
 
 If Required documents conflict, the higher-priority document takes precedence.
 
@@ -37,6 +38,7 @@ Understand the expected behavior before testing.
 - Identify regressions.
 - Verify error handling.
 - Verify validation.
+- When docs/UX.md exists, test each relevant screen's defined empty/loading/error/validation/failure states and Failure Flow, not just the happy path.
 - Verify authentication and authorization when applicable.
 - Suggest additional test cases.
 - Verify every Acceptance Criteria ID (AC-xxx) in docs/PRD.md that the change touches has at least one passing test or a manually verified scenario; report any AC with no coverage as a gap, not an assumption of pass.
