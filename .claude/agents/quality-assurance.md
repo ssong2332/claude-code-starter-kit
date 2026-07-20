@@ -58,6 +58,7 @@ Understand the expected behavior before testing.
 - Report reproducible issues only.
 - Explain how to reproduce every bug.
 - Prioritize issues by severity.
+- Never suggest implementation details unless necessary to explain a defect.
 
 ## Output
 Provide:
