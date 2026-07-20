@@ -93,6 +93,7 @@ Each agent's own file defines which documents are Required (always read if avail
 14. docs/Database.md
 15. docs/PromptRules.md
 16. docs/CHANGELOG.md
+17. docs/UpdateRequests.md
 
 ## Project Structure
 
