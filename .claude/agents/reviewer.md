@@ -24,6 +24,7 @@ Optional (read when relevant):
 - docs/GitWorkflow.md
 - docs/DECISIONS.md
 - docs/adr/*
+- docs/UX.md
 
 If Required documents conflict, the higher-priority document takes precedence.
 

@@ -22,6 +22,7 @@ Required (always read if available):
 Optional (read when relevant):
 - docs/GitWorkflow.md
 - docs/DECISIONS.md
+- docs/UX.md
 
 If Required documents conflict, the higher-priority document takes precedence.
 

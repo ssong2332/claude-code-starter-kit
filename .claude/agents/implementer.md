@@ -27,6 +27,7 @@ Optional (read when relevant to the current task):
 - docs/PromptRules.md
 - docs/API.md
 - docs/Database.md
+- docs/UX.md
 - docs/adr/*
 
 If Required documents conflict, the higher-priority document takes precedence.
@@ -36,6 +37,7 @@ Never ignore project documentation.
 ## Responsibilities
 - Implement only approved tasks.
 - Follow the existing architecture.
+- When docs/UX.md exists, follow its Screen Catalog states (loading/empty/error/success) and Interaction Patterns for the relevant screen instead of improvising UI behavior.
 - Keep code clean and maintainable.
 - Reuse existing components whenever possible.
 - Write modular code.

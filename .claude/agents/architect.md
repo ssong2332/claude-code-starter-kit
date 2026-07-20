@@ -19,6 +19,7 @@ Required (always read if available):
 6. docs/CodingRules.md
 
 Optional (read when relevant):
+- docs/UX.md
 - docs/DECISIONS.md
 - docs/adr/*
 - docs/Tasks.md
@@ -29,6 +30,7 @@ Understand the requirements before making any design decisions.
 
 ## Responsibilities
 - Read and understand docs/PRD.md before making any design decisions.
+- When docs/UX.md exists, design against each screen's Architect Handoff block (Data Required, External Dependencies, Permissions, Navigation Targets, Events Emitted, Expected Outputs) rather than re-deriving it from scratch.
 - Design the overall system architecture.
 - Define project structure and folder organization.
 - Recommend an appropriate technology stack when needed.

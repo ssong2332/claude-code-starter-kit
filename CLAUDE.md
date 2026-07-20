@@ -81,3 +81,20 @@ Record commands verbatim after the first success. Reuse without modification; if
 - How to invoke agents: docs/PromptRules.md
 - Completion criteria: docs/DefinitionOfDone.md
 - Git rules: docs/GitWorkflow.md
+
+
+## Change Workflow
+
+Do not restart the entire workflow for every change.
+
+Choose the earliest affected agent.
+
+Examples:
+
+- Documentation only → Docs
+- Bug fix → Implementer → Reviewer → QA → Docs
+- UI change → UX → Architect → Implementer → Reviewer → QA → Docs
+- Feature addition → Planner → UX → Architect → Implementer → Reviewer → QA → Docs
+- Architecture change → Architect → Implementer → Reviewer → QA → Docs
+
+Never invoke upstream agents unless the change affects their responsibility.

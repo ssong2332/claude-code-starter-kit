@@ -17,6 +17,7 @@ Required (always read if available):
 
 Optional (read whichever are relevant to what changed):
 - docs/PRD.md
+- docs/UX.md
 - docs/Architecture.md
 - docs/CodingRules.md
 - docs/Tasks.md

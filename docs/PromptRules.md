@@ -5,10 +5,11 @@ Owner: User. How to invoke the six agents. Contract details: AGENTS.md.
 ## Pipeline with Approval Gates
 ```
 planner → [user reviews PRD + answers Open Questions]
+→ ux-design (if the project has a user-facing UI) → [user approves flows/screens]
 → architect → [user approves design]
 → implementer (one Tasks.md ID at a time)
 → reviewer + quality-assurance
-→ (issues? → implementer again / design defect? → architect first)
+→ (issues? → implementer again / design defect? → architect first / UX defect? → ux-design first)
 → docs
 ```
 
@@ -16,7 +17,8 @@ planner → [user reviews PRD + answers Open Questions]
 | When | Say | Agent invoked |
 |---|---|---|
 | Project start / new requirements | "planner 에이전트로 요구사항 정리해줘" | planner |
-| PRD approved, need design | "architect 에이전트로 아키텍처 설계해줘" | architect |
+| PRD approved, project has a UI | "ux-design 에이전트로 UX 설계해줘" | ux-design |
+| PRD (and UX, if applicable) approved, need design | "architect 에이전트로 아키텍처 설계해줘" | architect |
 | Design approved, build task | "implementer로 Tasks.md의 T{{n}} 구현해줘" | implementer |
 | After implementation | "reviewer로 방금 변경분 리뷰해줘" | reviewer |
 | Before marking done | "quality-assurance로 T{{n}} 검증해줘" | quality-assurance |
