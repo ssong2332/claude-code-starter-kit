@@ -9,4 +9,4 @@ Owner: planner (see AGENTS.md). Status values: `todo` / `in-progress` / `review`
 
 ## Rules
 - One task = one implementer invocation. Keep tasks small.
-- A task is `done` only when docs/DefinitionOfDone.md is satisfied.
+- A task is `done` only when the docs/DefinitionOfDone.md Gate checklist passes and quality-assurance returns GO.

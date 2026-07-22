@@ -22,6 +22,13 @@ Document Version: {{v0.1}} · Last Updated: {{date}}
 ## Out of Scope (Future)
 - {{...}}
 
+## Planning Decisions
+The authoritative record of planning-level decisions (scope exclusions, priority calls, MVP boundary judgments). Downstream agents (ux-design, architect) must respect these even when other sections don't repeat them. Technical/architectural decisions do NOT belong here — those go in docs/DECISIONS.md (architect-owned). Append-only: if a decision changes, add a new row and mark the old one Superseded.
+
+| # | Decision | Reason | Affects | Status |
+|---|---|---|---|---|
+| 1 | {{e.g. "Login is out of MVP scope"}} | {{why}} | {{e.g. UX, Architecture, or "All"}} | {{Active / Superseded}} |
+
 ## Assumptions
 - {{...}}
 

@@ -27,5 +27,5 @@ Types: `feat` / `fix` / `refactor` / `docs` / `test` / `chore`
 
 ## Merge Rules
 - One task (docs/Tasks.md ID) = one branch = one PR.
-- PR merges only after docs/DefinitionOfDone.md checklist passes.
+- PR merges only after the docs/DefinitionOfDone.md Gate checklist passes (Closure items complete at the docs step after merge).
 - Squash-merge {{or merge-commit — pick one}}.

@@ -63,6 +63,7 @@ Every screen must use this template — do not vary the shape.
 
 ## Deprecated
 When a screen or flow is no longer supported by the latest docs/PRD.md: never delete it — move its entry here, mark it Deprecated, and explain why. This section is the design history; it does not need to satisfy the Consistency Check below.
+When this section exceeds ~10 entries, ux-design moves the oldest entries whose IDs are no longer referenced anywhere to docs/UX-archive.md (append-only). Archived IDs stay reserved — never reused.
 
 ### {{Flow/Screen Name}} ({{Flow ID / Screen ID}})
 | Item | Value |
@@ -95,6 +96,19 @@ When a screen or flow is no longer supported by the latest docs/PRD.md: never de
 | Mobile | {{...}} |
 
 If no behavior differs across breakpoints, state explicitly: "No breakpoint-specific behavior." Do not leave a row blank — a blank row is ambiguous between "not designed yet" and "no difference."
+
+## Claude Design Prompts
+One ready-to-paste prompt per screen or coherent screen group, for generating a visual UI mockup in Claude Design (claude.ai). Each prompt restates only what the Screen Catalog and Interaction Patterns already specify — never new features, copy, or styling requirements. Regenerate a prompt whenever its screen entry changes. Mockups are visual references only; this document remains the authoritative spec.
+
+### {{Prompt name}} (covers: {{Screen ID(s), e.g. UX-001, UX-002}})
+| Item | Value |
+|---|---|
+| Source Screens | {{Screen ID(s) and names}} |
+| Last Synced With | {{Document Version of this UX.md when the prompt was last regenerated}} |
+
+```
+{{the prompt itself — screen purpose, layout intent, primary/secondary actions, all States (loading/empty/error/success), validation behavior, accessibility constraints, responsive behavior, relevant Interaction Patterns}}
+```
 
 ## UX Decision Log
 Append-only — never rewrite or delete a past entry. If docs/PRD.md changes make a decision no longer valid, add a new entry and mark the old one's Status as Superseded or Deprecated — never delete it.

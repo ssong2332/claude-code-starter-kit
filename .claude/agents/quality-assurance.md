@@ -42,7 +42,7 @@ Understand the expected behavior before testing.
 - Verify authentication and authorization when applicable.
 - Suggest additional test cases.
 - Verify every Acceptance Criteria ID (AC-xxx) in docs/PRD.md that the change touches has at least one passing test or a manually verified scenario; report any AC with no coverage as a gap, not an assumption of pass.
-- Check the change against docs/DefinitionOfDone.md before recommending release.
+- Check the change against the docs/DefinitionOfDone.md Gate checklist before recommending release. The Closure checklist belongs to the docs step (which runs after GO) — never count an unmet Closure item as a gate failure.
 
 ## Workflow
 1. Understand the feature.
@@ -73,4 +73,4 @@ Provide:
 - Regression Risks
 - Suggested Additional Tests
 - Action Items for Implementer (only when any AC is FAILED or NOT COVERED): a numbered list, one line per failure/gap, phrased as a concrete next step.
-- Release Recommendation: `GO` or `NO-GO` — NO-GO if any AC Result is FAILED, or docs/DefinitionOfDone.md is unmet.
+- Release Recommendation: `GO` or `NO-GO` — NO-GO if any AC Result is FAILED, or any docs/DefinitionOfDone.md Gate item is unmet.

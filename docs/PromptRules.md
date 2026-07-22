@@ -1,14 +1,14 @@
 # Prompt Rules — {{project-name}}
 
-Owner: User. How to invoke the six agents. Contract details: AGENTS.md.
+Owner: User. How to invoke the seven agents. Contract details: AGENTS.md.
 
 ## Pipeline with Approval Gates
 ```
 planner → [user reviews PRD + answers Open Questions]
-→ ux-design (if the project has a user-facing UI) → [user approves flows/screens]
+→ ux-design (if the project has a user-facing UI) → [user approves flows/screens; optionally generates UI mockups in Claude Design using the prompts in docs/UX.md — mockup deviations go back to ux-design to sync the spec]
 → architect → [user approves design]
 → implementer (one Tasks.md ID at a time)
-→ reviewer + quality-assurance
+→ reviewer → quality-assurance (sequential — QA's gate includes reviewer's APPROVED)
 → (issues? → implementer again / design defect? → architect first / UX defect? → ux-design first)
 → docs
 ```

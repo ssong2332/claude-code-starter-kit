@@ -2,7 +2,7 @@
 name: "reviewer"
 description: "Use this agent after implementation to review code quality, maintainability, performance, security, and consistency with the project architecture. This agent must never modify code."
 tools: Glob, Grep, ListMcpResourcesTool, Read, ReadMcpResourceDirTool, ReadMcpResourceTool, TaskCreate, TaskGet, TaskList, TaskStop, TaskUpdate, WebFetch, WebSearch, Bash
-model: sonnet
+model: opus
 color: purple
 ---
 
@@ -84,4 +84,4 @@ Provide:
 - Positive Feedback
 - Overall Assessment
 - Status: `APPROVED` or `REJECTED` — REJECTED if any Critical Issue exists; otherwise APPROVED.
-- Action Items for Implementer (only when Status is REJECTED): a numbered list, one line per Critical/Major issue, phrased as a concrete next step implementer can act on without re-deriving the finding.
+- Action Items for Implementer (whenever any Critical or Major issue exists, regardless of Status): a numbered list, one line per Critical/Major issue, phrased as a concrete next step implementer can act on without re-deriving the finding. On REJECTED these block the task; on APPROVED they are non-blocking follow-ups — recorded here so Major issues are never lost in report prose.
