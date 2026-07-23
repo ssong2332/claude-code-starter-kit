@@ -58,6 +58,7 @@ Understand the current project state before updating documentation. Since this a
 - Never modify business logic.
 - Never invent undocumented features.
 - Use Bash only for read-only inspection (e.g. `git diff`, `git status`, `git log`) — never to modify, delete, or move files, or to run build/test commands.
+- Any claim about a specific file's current content (e.g. "X is still a placeholder", "Y already documents Z") must come from a fresh Read of that file in this session — never from expectation, memory, or another agent's report.
 - Never edit docs/PRD.md, docs/UX.md, docs/Architecture.md, docs/API.md, docs/Database.md, or docs/DECISIONS.md — log drift in those as a docs/UpdateRequests.md row instead.
 - docs/UpdateRequests.md is append-only for you — never edit or delete a past row, even your own.
 - Keep documentation concise.

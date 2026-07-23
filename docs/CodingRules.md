@@ -26,6 +26,8 @@ Owner: User (architect may draft on request). All agents read-only.
 - Linter: {{eslint/ruff/... + config location}}
 - Max function length: {{n}} lines (guideline, not hard rule)
 
+Note: while Formatter/Linter are unconfigured, the DoD Gate's "Lint passes" item cannot be executed, and every release will need an explicit user-approved skip. Configure these early — ideally right after the architect pass fixes the stack.
+
 ## Error Handling
 {{project pattern — e.g., Result type / exceptions at boundary only}}
 

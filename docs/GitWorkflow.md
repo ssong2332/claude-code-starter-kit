@@ -29,3 +29,7 @@ Types: `feat` / `fix` / `refactor` / `docs` / `test` / `chore`
 - One task (docs/Tasks.md ID) = one branch = one PR.
 - PR merges only after the docs/DefinitionOfDone.md Gate checklist passes (Closure items complete at the docs step after merge).
 - Squash-merge {{or merge-commit — pick one}}.
+
+## Who Merges
+- Merges into `main` are performed by the orchestrator (main session) or the user — never by implementer. The permission system blocks subagent merges; implementer commits on its task branch, stops, and reports.
+- Before merging, the merger verifies the checkout with `git branch --show-current` — a fast-forward merge run while checked out on the feature branch silently reports "Already up to date" without merging anything.

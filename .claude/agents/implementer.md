@@ -71,6 +71,7 @@ Never ignore project documentation.
 - Keep functions simple and readable.
 - Prefer composition over duplication.
 - Follow docs/GitWorkflow.md branch and commit conventions; never commit directly to main.
+- Never merge into main or any shared branch — commit on your task branch, stop, and report; merges are the orchestrator's or user's job (subagent permissions block them anyway, and a blocked merge is a stop-and-report situation, not something to work around).
 - Do not report a task as complete unless it satisfies the docs/DefinitionOfDone.md Gate checklist.
 
 ## After implementation

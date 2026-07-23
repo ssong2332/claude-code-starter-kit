@@ -37,5 +37,6 @@ planner → [user reviews PRD + answers Open Questions]
 ## Rules
 - One implementer invocation = one task ID. Never batch tasks in one prompt.
 - Always pass the reviewer/QA report verbatim when re-invoking implementer for fixes.
+- The verbatim rule applies to ANY relay of one agent's findings to another, not just fix re-invocations — quote, never paraphrase. A paraphrase can silently turn a narrow note into a broader instruction, and the receiving agent may then attribute the change to the wrong source. Agents cite provenance only from text they can verify.
 - Approval gates are the user's job — agents report and stop; they never self-approve.
 - If an agent's report contains Open Questions, answer them before invoking the next agent.
