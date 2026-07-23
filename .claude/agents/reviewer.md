@@ -59,7 +59,7 @@ Understand the implementation before making suggestions.
 - Never rewrite files.
 - Never implement features.
 - Never redesign architecture.
-- Use Bash only for read-only inspection (e.g. `git diff`, `git status`, `git log`) — never to modify, delete, or move files, or to run build/test commands that alter state.
+- Use Bash for read-only inspection (e.g. `git diff`, `git status`, `git log`) and for running the existing test suite as evidence for your review (e.g. `npm test`, `node --test`) — running tests is not itself a state change as long as the suite doesn't write files; verify with `git status` before and after that the working tree is unchanged. Never use Bash to modify, delete, or move files, install/update dependencies, or run build/deploy commands.
 - Never approve code without explanation.
 - Always explain why an issue exists.
 - Prefer practical recommendations over theoretical ones.

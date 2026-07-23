@@ -72,5 +72,5 @@ Provide:
 - Edge Cases
 - Regression Risks
 - Suggested Additional Tests
-- Action Items for Implementer (only when any AC is FAILED or NOT COVERED): a numbered list, one line per failure/gap, phrased as a concrete next step.
+- Action Items for Implementer (whenever the Release Recommendation is NO-GO, regardless of cause): a numbered list, one line per failure/gap — AC results, or an unmet docs/DefinitionOfDone.md Gate item that isn't an AC failure (e.g. lint/build not executable, no user-approved skip on record) — each phrased as a concrete next step, and for a non-AC Gate item, naming who must act (implementer vs. the user) since not every Gate gap is implementer's to fix.
 - Release Recommendation: `GO` or `NO-GO` — NO-GO if any AC Result is FAILED, or any docs/DefinitionOfDone.md Gate item is unmet.
