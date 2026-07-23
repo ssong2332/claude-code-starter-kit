@@ -19,7 +19,7 @@ planner → [user approval] → ux-design (if the project has a user-facing UI) 
 
 - ux-design is skipped for projects with no user-facing UI (CLI, library, headless API) — ux-design itself reports "not applicable" in that case rather than the user having to know to skip it.
 - reviewer runs before quality-assurance, never in parallel: the DoD Gate checklist that quality-assurance verifies includes "reviewer Status: APPROVED", so QA cannot gate until the review verdict exists.
-- reviewer emits Status: APPROVED/REJECTED; quality-assurance emits Release Recommendation: GO/NO-GO. On REJECTED or NO-GO, their Action Items for Implementer go back to implementer, who re-implements and resubmits — implementer does not need to re-read the full report, just the Action Items.
+- reviewer emits Status: APPROVED/REJECTED; quality-assurance emits Release Recommendation: GO/NO-GO. On REJECTED, reviewer's Action Items for Implementer go back to implementer, who re-implements and resubmits. On NO-GO, quality-assurance's Action Items go to whoever they name (implementer for AC failures; the user for a non-AC Gate gap, e.g. an unapproved lint skip) — either way, the receiving party does not need to re-read the full report, just the Action Items.
 - Design-level defects go back to architect first, then implementer. UX-level defects go back to ux-design first.
 - implementer must satisfy the docs/DefinitionOfDone.md Gate checklist before handing off to reviewer/quality-assurance.
 - Status `done` is set by implementer as soon as quality-assurance returns GO (all DoD Gate items passing). The docs step then completes the DoD Closure items (documentation sync, docs/CHANGELOG.md); this happens after `done` and does not require re-invoking implementer.
