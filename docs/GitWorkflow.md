@@ -28,7 +28,7 @@ Types: `feat` / `fix` / `refactor` / `docs` / `test` / `chore`
 ## Merge Rules
 - One task (docs/Tasks.md ID) = one branch = one PR.
 - PR merges only after the docs/DefinitionOfDone.md Gate checklist passes (Closure items complete at the docs step after merge).
-- Squash-merge {{or merge-commit — pick one}}.
+- Fast-forward merge when possible (preserves per-task commits for individual revert/bisect); merge-commit when fast-forward is not possible. Never squash — intermediate commits (review fixes, attribution corrections) are part of the audit trail.
 
 ## Who Merges
 - Merges into `main` are performed by the orchestrator (main session) or the user — never by implementer. The permission system blocks subagent merges; implementer commits on its task branch, stops, and reports.
