@@ -49,7 +49,7 @@ Each agent acts only within its authority. An agent must never perform work outs
 | implementer | docs/PRD.md, docs/Architecture.md, docs/CodingRules.md, docs/GitWorkflow.md, docs/Tasks.md, docs/API.md, docs/Database.md, docs/UX.md, docs/DefinitionOfDone.md | Source code, implementation report | Source code; the Status column of its own task row in docs/Tasks.md only (recommend other doc updates; never silently change them) |
 | reviewer | git diff (preferred), files explicitly specified by the caller, project documentation, docs/GitWorkflow.md, docs/UX.md (if present) | Review report (Status: APPROVED / REJECTED) | Nothing |
 | quality-assurance | git diff (preferred), files explicitly specified by the caller, project documentation, docs/DefinitionOfDone.md, docs/UX.md | Test report (Release Recommendation: GO / NO-GO) | Nothing |
-| docs | Project changes (git diff), README.md, docs/CHANGELOG.md, other project documentation (read-only, to detect drift) | Updated README.md/CHANGELOG.md, rows appended to docs/UpdateRequests.md for documents it doesn't own, documentation summary | README.md, docs/CHANGELOG.md, docs/UpdateRequests.md (append-only) |
+| docs | Project changes (git diff), README.md, docs/CHANGELOG.md, other project documentation (read-only, to detect drift) | Updated README.md/docs/CHANGELOG.md, rows appended to docs/UpdateRequests.md for documents it doesn't own, documentation summary | README.md, docs/CHANGELOG.md, docs/UpdateRequests.md (append-only) |
 | planner / ux-design / architect | (in addition to their existing inputs) docs/UpdateRequests.md rows naming them as Owning Agent | (in addition to existing outputs) resolved Status on the rows they acted on | (in addition to existing scope) docs/UpdateRequests.md Status column, rows they own only |
 
 ## Document Ownership
@@ -75,6 +75,8 @@ Each agent acts only within its authority. An agent must never perform work outs
 | docs/CHANGELOG.md | docs | Read-only |
 | docs/UpdateRequests.md | docs | Read-only, except the named Owning Agent (planner/ux-design/architect) may flip a row's Status from `open` to `resolved` |
 | Source code | implementer | Read-only |
+| .claude/agents/*.md | User | Read-only. An agent's own definition file is not something it edits at runtime |
+| .claude/memory-protocol.md | User | Read-only |
 
 ## Document Priority
 
@@ -84,19 +86,20 @@ Each agent's own file defines which documents are Required (always read if avail
 2. AGENTS.md
 3. docs/PRD.md
 4. docs/UX.md
-5. docs/Architecture.md
-6. docs/DECISIONS.md
-7. docs/adr/
-8. docs/CodingRules.md
-9. docs/GitWorkflow.md
-10. docs/DefinitionOfDone.md
-11. docs/Tasks.md
-12. docs/API.md
-13. docs/Database.md
-14. docs/PromptRules.md
-15. README.md
-16. docs/CHANGELOG.md
-17. docs/UpdateRequests.md
+5. docs/UX-archive.md
+6. docs/Architecture.md
+7. docs/DECISIONS.md
+8. docs/adr/
+9. docs/CodingRules.md
+10. docs/GitWorkflow.md
+11. docs/DefinitionOfDone.md
+12. docs/Tasks.md
+13. docs/API.md
+14. docs/Database.md
+15. docs/PromptRules.md
+16. README.md
+17. docs/CHANGELOG.md
+18. docs/UpdateRequests.md
 
 README.md and docs/CHANGELOG.md rank below the spec documents because they are derived from them (docs keeps them synchronized) — a derived document must never win a conflict against the spec it was derived from.
 
@@ -110,6 +113,7 @@ project/
 └── docs/
     ├── PRD.md
     ├── UX.md
+    ├── UX-archive.md
     ├── Architecture.md
     ├── Tasks.md
     ├── CodingRules.md

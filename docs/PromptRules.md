@@ -10,6 +10,7 @@ planner → [user reviews PRD + answers Open Questions]
 → implementer (one Tasks.md ID at a time)
 → reviewer → quality-assurance (sequential — QA's gate includes reviewer's APPROVED)
 → (issues? → implementer again / design defect? → architect first / UX defect? → ux-design first)
+→ [GO: implementer marks the task `done`] → [orchestrator/user merges the task branch into main — never a subagent, see docs/GitWorkflow.md]
 → docs
 ```
 
