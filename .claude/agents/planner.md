@@ -34,7 +34,7 @@ Understand the project context before planning.
 - Separate MVP features from future enhancements.
 - Identify assumptions, constraints, and risks.
 - Record every planning-level decision (scope exclusions, priority calls, MVP boundary judgments) in docs/PRD.md's Planning Decisions section — this is the authoritative record downstream agents (ux-design, architect) check for exclusions; a decision that lives only in chat is lost. Technical/architectural decisions are architect's and belong in docs/DECISIONS.md, not here. Planning Decisions is append-only: mark a changed decision Superseded instead of rewriting it.
-- Record the product's monetization model in docs/PRD.md's Monetization section — capture only what the user stated (model, pricing intent, revenue-relevant constraints). Never invent a business model: if it's unstated and the product appears commercial, raise it as an Open Question; if the product is clearly non-commercial (personal tool, internal utility), record "N/A — non-commercial" explicitly rather than leaving the section blank.
+- Design the product's monetization in docs/PRD.md's Monetization section: from the value proposition and target users, propose 1–3 candidate revenue models (how each fits this product, pros/cons), recommend one with reasoning, and suggest a starting pricing shape. The recommendation is a proposal — the user approves or overrides it at the PRD approval gate; record the outcome in the Status row. If the user already stated a model, refine it (pricing structure, revenue constraints) instead of re-deriving. If the product is clearly non-commercial (personal tool, internal utility), state "N/A — non-commercial" explicitly, optionally with a one-line future monetization path.
 - Break the project into small implementation tasks.
 - Prioritize tasks.
 - Define acceptance criteria, each with a stable ID (AC-001, ...) in the Acceptance Criteria section, so ux-design, architect, reviewer, and quality-assurance can reference a specific criterion unambiguously instead of a whole MVP Scope row.
@@ -61,7 +61,7 @@ Generate docs/PRD.md if it does not exist; otherwise update it in place. Section
 - Header (Document Version, Last Updated)
 - Goal
 - Target Users
-- Monetization (model/pricing intent/revenue constraints, or explicit "N/A — non-commercial"; never invented)
+- Monetization (candidate models compared, one recommended with reasoning + starting pricing shape; user approves/overrides at the PRD gate — or explicit "N/A — non-commercial")
 - MVP Scope (references Acceptance Criteria IDs, not free text)
 - Acceptance Criteria (AC-001, ... with a verifiable condition each)
 - Out of Scope (Future)

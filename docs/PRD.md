@@ -10,13 +10,19 @@ Document Version: {{v0.1}} · Last Updated: {{date}}
 {{who, and their core problem}}
 
 ## Monetization
-How this product makes money. Filled only from what the user stated — planner never invents a business model. If unstated and the product appears commercial, this becomes an Open Question; if clearly non-commercial, state "N/A — non-commercial" explicitly.
+planner designs and recommends the revenue model that best fits this product; the user approves or overrides it at the PRD approval gate. For clearly non-commercial products, state "N/A — non-commercial" explicitly (optionally with a one-line future path) and skip the tables.
+
+| Candidate model | How it fits this product | Pros | Cons |
+|---|---|---|---|
+| {{e.g. subscription}} | {{...}} | {{...}} | {{...}} |
+| {{e.g. one-time purchase}} | {{...}} | {{...}} | {{...}} |
 
 | Item | Value |
 |---|---|
-| Model | {{free / one-time purchase / subscription / ads / usage-based / N/A — non-commercial}} |
-| Pricing intent | {{tiers or price points the user stated, or "not stated"}} |
+| Recommended model | {{planner's pick + one-line reasoning}} |
+| Pricing shape | {{suggested starting tiers or price points}} |
 | Revenue constraints | {{e.g. "MVP must work without a payment provider", or "none"}} |
+| Status | {{proposed / user-approved / user-overridden → {{model}}}} |
 
 ## MVP Scope
 | # | Feature | Priority | Acceptance Criteria |

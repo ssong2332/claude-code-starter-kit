@@ -8,7 +8,7 @@ This file tracks changes to the **kit itself**. It stays at the kit's root and i
 
 ### Added
 - architect Security Design Checklist (auth, secrets, sensitive data, validation boundaries, attack surface, dependency risk, abuse cases) — outcomes recorded in Architecture.md's new Security section, which replaces the bare Authentication/Authorization section; every row requires a decision or an explicit "N/A — reason"
-- planner Monetization capture — new PRD.md Monetization section (model / pricing intent / revenue constraints); planner never invents a business model: unstated-but-commercial becomes an Open Question, non-commercial products state "N/A — non-commercial" explicitly
+- planner Monetization design — new PRD.md Monetization section: planner proposes 1–3 candidate revenue models (fit/pros/cons), recommends one with reasoning and a starting pricing shape; the user approves or overrides at the PRD gate (Status row records the outcome); non-commercial products state "N/A — non-commercial" explicitly
 
 ## [1.1.0] - 2026-07-23
 
