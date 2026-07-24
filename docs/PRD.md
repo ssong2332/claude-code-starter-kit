@@ -9,6 +9,15 @@ Document Version: {{v0.1}} · Last Updated: {{date}}
 ## Target Users
 {{who, and their core problem}}
 
+## Monetization
+How this product makes money. Filled only from what the user stated — planner never invents a business model. If unstated and the product appears commercial, this becomes an Open Question; if clearly non-commercial, state "N/A — non-commercial" explicitly.
+
+| Item | Value |
+|---|---|
+| Model | {{free / one-time purchase / subscription / ads / usage-based / N/A — non-commercial}} |
+| Pricing intent | {{tiers or price points the user stated, or "not stated"}} |
+| Revenue constraints | {{e.g. "MVP must work without a payment provider", or "none"}} |
+
 ## MVP Scope
 | # | Feature | Priority | Acceptance Criteria |
 |---|---|---|---|

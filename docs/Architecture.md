@@ -20,8 +20,18 @@ Based on PRD Version: {{x.x}} · Based on UX Version: {{y.y or N/A}} · Last Upd
 ## Data Flow
 {{request → ... → response}}
 
-## Authentication / Authorization
-{{strategy, or "N/A"}}
+## Security
+Outcome of architect's Security Design Checklist (see .claude/agents/architect.md). Every row gets a decision or an explicit "N/A — reason" — never blank.
+
+| Item | Decision |
+|---|---|
+| Authentication / Authorization | {{strategy, or "N/A — reason"}} |
+| Secrets & configuration | {{env vars used and where secrets live, or "no secrets"}} |
+| Sensitive data | {{what exists, where stored, protection at rest/in transit, or "none held"}} |
+| Input validation boundaries | {{which boundaries validate, which layer owns it}} |
+| Attack surface | {{what is exposed and what limits it}} |
+| Dependency risk | {{new deps + DECISIONS.md refs, or "no new dependencies"}} |
+| Abuse cases | {{per-feature abuse notes, or "no meaningful abuse case"}} |
 
 ## Conventions
 {{architectural rules implementer must follow — e.g., business logic never imports framework code}}

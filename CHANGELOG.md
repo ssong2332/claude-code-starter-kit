@@ -4,6 +4,12 @@ All notable changes to this Starter Kit will be documented in this file.
 
 This file tracks changes to the **kit itself**. It stays at the kit's root and is not copied into new projects — new projects get `docs/CHANGELOG.md` (a blank template) instead.
 
+## [1.2.0] - 2026-07-24
+
+### Added
+- architect Security Design Checklist (auth, secrets, sensitive data, validation boundaries, attack surface, dependency risk, abuse cases) — outcomes recorded in Architecture.md's new Security section, which replaces the bare Authentication/Authorization section; every row requires a decision or an explicit "N/A — reason"
+- planner Monetization capture — new PRD.md Monetization section (model / pricing intent / revenue constraints); planner never invents a business model: unstated-but-commercial becomes an Open Question, non-commercial products state "N/A — non-commercial" explicitly
+
 ## [1.1.0] - 2026-07-23
 
 ### Added

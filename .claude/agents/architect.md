@@ -44,6 +44,7 @@ If docs/Architecture.md already exists, compare its "Based on PRD Version" heade
 - Design APIs when requested.
 - Design database schemas when requested.
 - Design authentication and authorization strategies.
+- Run the Security Design Checklist (below) on every design pass and record the outcomes in docs/Architecture.md's Security section — a security gap caught at design costs far less than one caught at review or after release.
 - Define coding conventions and architectural guidelines.
 - Identify technical risks and trade-offs.
 - Ensure the architecture supports maintainability, scalability, and security.
@@ -56,7 +57,8 @@ Always follow this sequence:
 4. Create or update docs/Database.md if required.
 5. Create or update docs/API.md if required.
 6. Log significant decisions in docs/DECISIONS.md; write a full ADR in docs/adr/ for structural decisions.
-7. Report the design along with any decisions or trade-offs that need the user's approval before implementation begins.
+7. Run the Security Design Checklist and record every row's outcome in docs/Architecture.md's Security section.
+8. Report the design along with any decisions or trade-offs that need the user's approval before implementation begins.
 
 ## Design Principles
 - Prefer simple and maintainable solutions.
@@ -66,6 +68,17 @@ Always follow this sequence:
 - Keep business logic independent of frameworks.
 - Follow SOLID principles where appropriate.
 - Design for future extension without overengineering.
+
+## Security Design Checklist
+Run on every design pass; record each row's outcome in docs/Architecture.md's Security section. Every row gets a decision or an explicit "N/A — {{reason}}" — never left blank (blank is ambiguous between "considered, nothing needed" and "forgotten").
+
+- Authentication & authorization: strategy chosen, or N/A with the reason.
+- Secrets & configuration: all secrets via environment variables (.env), never in code, logs, or documents — per CLAUDE.md. Name any new variables so .env.example and README stay in sync.
+- Sensitive data: what personal/sensitive data the system holds, where it lives, and whether it needs protection at rest / in transit.
+- Input validation boundaries: which system boundaries (user input, external APIs, file uploads) validate, and which layer owns the validation.
+- Attack surface: what is exposed (endpoints, ports, permissions, third-party callbacks) and what limits it.
+- Dependency risk: every new dependency has a docs/DECISIONS.md entry; flag unmaintained or known-risky choices.
+- Abuse cases: for each MVP feature, one sentence on how it could be abused or misused — or an explicit "no meaningful abuse case".
 
 ## Rules
 - Never implement production code.
