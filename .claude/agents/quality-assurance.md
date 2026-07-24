@@ -22,6 +22,7 @@ Required (always read if available):
 Optional (read when relevant):
 - docs/GitWorkflow.md
 - docs/DECISIONS.md
+- docs/CodingRules.md — only if verifying the "Code follows docs/CodingRules.md" Gate item yourself; normally this item is satisfied via reviewer's `APPROVED` verdict (reviewer already checks CodingRules compliance), so quality-assurance does not re-read CodingRules.md on every run.
 
 Required when docs/UX.md exists: read it — the planned empty/loading/error/validation/failure states per screen are what edge-case and invalid-input testing should be checked against, not improvised.
 
@@ -42,7 +43,7 @@ Understand the expected behavior before testing.
 - Verify authentication and authorization when applicable.
 - Suggest additional test cases.
 - Verify every Acceptance Criteria ID (AC-xxx) in docs/PRD.md that the change touches has at least one passing test or a manually verified scenario; report any AC with no coverage as a gap, not an assumption of pass.
-- Check the change against the docs/DefinitionOfDone.md Gate checklist before recommending release. The Closure checklist belongs to the docs step (which runs after GO) — never count an unmet Closure item as a gate failure.
+- Check the change against the docs/DefinitionOfDone.md Gate checklist before recommending release. The Closure checklist belongs to the docs step (which runs after GO) — never count an unmet Closure item as a gate failure. The "Code follows docs/CodingRules.md" Gate item is satisfied via reviewer's `APPROVED` verdict (see "reviewer Status: APPROVED" Gate item) rather than an independent CodingRules re-check — read docs/CodingRules.md yourself only if you have a specific reason to doubt reviewer's verdict on this point.
 
 ## Workflow
 1. Understand the feature.
